@@ -1,0 +1,41 @@
+#root-container {
+  background: #ffffff;
+
+  position: absolute;
+  width: 740px;
+  height: 317px;
+  top: 344px;
+  left: 386px;
+  border-radius: 6px;
+  border: 2px solid black;
+  z-index: 99999;
+}
+.group-name {
+  display: flex;
+  margin: 18px;
+}
+.input-name {
+  width: 435px;
+  height: 51px;
+  top: 439px;
+  left: 641px;
+  border-radius: 22px;
+  border: 2px solid black;
+  margin-left: 20px;
+  font-family: Roboto;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0.035em;
+  text-align: left;
+}
+.create-button {
+  position: absolute;
+  width: 154px;
+  height: 38px;
+  right: 2%;
+  bottom: 2%;
+  border-radius: 11px;
+  background: #000000;
+  color: #ffffff;
+}

@@ -1,0 +1,25 @@
+/* .home-container {
+    display: flex;
+    
+  } */
+  .notes-list-container {
+   
+    height: 100vw;
+    width: 30vw;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-note-button {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    width: 343px;
+    height: 51px;
+    top: 117px;
+    left: 44px;
+    border-radius: 50px;
+    
+  }
+  
