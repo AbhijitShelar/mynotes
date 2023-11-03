@@ -1,8 +1,12 @@
 import React from 'react'
-
-const NoteList = () => {
+import './NoteList.css'
+const NoteList = ({title}) => {
   return (
-    <div>
+    <div className='note-title-list'>
+
+      <div className='note-title'>
+        {title}
+      </div>
       
     </div>
   )

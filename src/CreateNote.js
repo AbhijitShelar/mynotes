@@ -1,23 +1,22 @@
-// import { useState } from "react";
-import React  from "react";
-import "./CreateNote.css";
-import useMynotecontext from "./hooks/useMynotecontext";
+import React, { useState } from 'react';
+import { useNoteContext } from './NoteContext';
+import './CreateNote.css';
+
 const CreateNote = () => {
+  const [groupName, setGroupName] = useState('');
+  const { addTitle } = useNoteContext();
 
-  const {notename,setNotename}=useMynotecontext();
   const handlechange = (e) => {
-      setNotename(e.target.value); 
+    setGroupName(e.target.value);
   };
+
   const handleclick = () => {
-    const root = document.getElementById("root-container");
-    root.style.display = "none";
-    localStorage.setItem(notename,notename);
+
     
-    setNotename("");
-
-
+    localStorage.setItem(groupName, groupName);
+    addTitle(groupName);
+    setGroupName('');
   };
- 
 
   return (
     <div id="root-container">
@@ -25,11 +24,13 @@ const CreateNote = () => {
       <div className="group-name">
         <h2>Group name</h2>
         <input
+        id='input-text'
           type="text"
           className="input-name"
-          value={notename}
+          value={groupName}
           onChange={handlechange}
           placeholder="Enter Group Name...."
+          
         ></input>
       </div>
       <div className="color">

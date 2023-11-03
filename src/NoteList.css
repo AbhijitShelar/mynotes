@@ -1,0 +1,23 @@
+.note-title-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 244.71px;
+  height: 68.9px;
+  top: 309.18px;
+  left: 44px;
+
+  border: 2px solid black;
+  
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.note-title {
+  font-family: Roboto;
+  color: black;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
