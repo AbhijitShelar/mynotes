@@ -1,16 +1,51 @@
 .home-container {
-  height: 100vw;
-  width: 75vw;
- 
   background: #f7ecdc;
+  width: 75%;
 }
 
 .header-note {
   display: flex;
-  justify-content: center;
-  height: 7vw;
-  width: 75vw;
   
+  height: 5vw;
+  width: 75vw;
+
   background: whitesmoke;
   text-transform: capitalize;
+}
+
+.type-container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 255px;
+
+  bottom: 0%;
+  background: #e8e8e8;
+}
+.note-box {
+  background: #ffffff;
+
+  width: 1014px;
+  height: 211px;
+
+  border-radius: 9px;
+  border: 1px solid #cccccc;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0.02em;
+  text-align: start;
+}
+.send {
+  position: absolute;
+  width: 34.44px;
+  height: 29px;
+  bottom: 15%;
+  right: 10%;
+  cursor: pointer;
+  border: none;
+  background: url("send.png");
 }

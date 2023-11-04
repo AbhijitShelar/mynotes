@@ -4,11 +4,12 @@
   } */
   .notes-list-container {
    
-    height: 100vw;
-    width: 25vw;
+    height: 56vw;
+    width: 25%;
     margin-left: 5px;
     display: flex;
     flex-direction: column;
+   
   }
   
   .create-note-button {
@@ -20,6 +21,7 @@
     top: 117px;
     left: 44px;
     border-radius: 50px;
+    cursor: pointer;
     
   }
   
