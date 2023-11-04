@@ -8,7 +8,7 @@ export function useNoteContext() {
 
 export function NoteContextProvider({ children }) {
   const [titles, setTitles] = useState([]);
-  const [displayTitle,setDisplayTitle]=useState('');
+  const [displayTitle, setDisplayTitle] = useState('');
 
   const addTitle = (title) => {
     setTitles((prevTitles) => [...prevTitles, title]);
@@ -16,20 +16,17 @@ export function NoteContextProvider({ children }) {
 
   useEffect(() => {
     // Load titles from local storage on initial render
-    const titleArray = [];
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (key) {
-        const title = localStorage.getItem(key);
-        titleArray.push(title);
-      }
+    const storedTitles = localStorage.getItem('noteTitles');
+    if (storedTitles) {
+      setTitles(JSON.parse(storedTitles));
     }
-    setTitles(titleArray);
   }, []);
+  
 
+  
 
   return (
-    <NoteContext.Provider value={{ titles, addTitle,displayTitle,setDisplayTitle }}>
+    <NoteContext.Provider value={{ titles, addTitle, displayTitle, setDisplayTitle }}>
       {children}
     </NoteContext.Provider>
   );

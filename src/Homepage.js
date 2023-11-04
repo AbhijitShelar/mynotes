@@ -10,6 +10,9 @@ const Homepage = () => {
       <div className='header-note'>
         <h1>{displayTitle}</h1>
       </div>
+      <div className='display-notes'>
+
+      </div>
       <div className='type-container'>
         <input
           type='text'
