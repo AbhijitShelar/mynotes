@@ -1,12 +1,14 @@
 import './Homepage.css';
-
+import { useNoteContext } from './NoteContext';
 const Homepage = () => {
-  
+       const {displayTitle}=useNoteContext();      
 
   return (
     <div className='home-container'>
-   
-      <h1>Notes section</h1>
+      <div className='header-note'>
+        <h1>{displayTitle}</h1>
+      </div>
+     
     </div>
   );
 }

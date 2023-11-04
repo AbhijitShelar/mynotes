@@ -1,14 +1,16 @@
 #root-container {
   background: #ffffff;
 
-  position: absolute;
   width: 740px;
   height: 317px;
-  top: 344px;
-  left: 386px;
+  position: fixed;
   border-radius: 6px;
   border: 2px solid black;
   z-index: 99999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 .group-name {
   display: flex;

@@ -8,6 +8,7 @@ export function useNoteContext() {
 
 export function NoteContextProvider({ children }) {
   const [titles, setTitles] = useState([]);
+  const [displayTitle,setDisplayTitle]=useState('');
 
   const addTitle = (title) => {
     setTitles((prevTitles) => [...prevTitles, title]);
@@ -26,8 +27,9 @@ export function NoteContextProvider({ children }) {
     setTitles(titleArray);
   }, []);
 
+
   return (
-    <NoteContext.Provider value={{ titles, addTitle }}>
+    <NoteContext.Provider value={{ titles, addTitle,displayTitle,setDisplayTitle }}>
       {children}
     </NoteContext.Provider>
   );
