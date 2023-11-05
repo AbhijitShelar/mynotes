@@ -13,7 +13,7 @@ const Homepage = () => {
 
   
   const [date, setDate] = useState(new Date());
-  const [ setNoteNamesParent] = useState(
+  const [noteNamesParent, setNoteNamesParent] = useState(
     JSON.parse(localStorage.getItem(displayTitle)) || []
   );
 

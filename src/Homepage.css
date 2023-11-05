@@ -9,7 +9,7 @@
  padding: 10px;
   display: flex;
   height: 5vw;
-  width: 75vw;
+  width: 77vw;
   background: whitesmoke;
   text-transform: capitalize;
 }
@@ -28,7 +28,7 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  width: 1200px;
+  width: 78vw;
   height: 200px;
   bottom: 0;
   background: #e8e8e8;
@@ -78,7 +78,7 @@
   align-items: center;
 
   background: #f7ecdc;
-  width: 75%;
+  width: 78%;
 }
 .img-container {
   margin-top: 15%;
