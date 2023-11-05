@@ -1,16 +1,26 @@
+/* Note.css (or your desired CSS file) */
 .home-container {
   background: #f7ecdc;
-  width: 75%;
+  width: 78%;
 }
 
 .header-note {
+  align-items: center;
+ padding: 10px;
   display: flex;
-  
   height: 5vw;
   width: 75vw;
-
   background: whitesmoke;
   text-transform: capitalize;
+}
+.header-note-title {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin: 10px;
 }
 
 .type-container {
@@ -19,26 +29,34 @@
   justify-content: center;
   align-items: center;
   width: 1200px;
-  height: 255px;
-
-  bottom: 0%;
+  height: 200px;
+  bottom: 0;
   background: #e8e8e8;
 }
+
 .note-box {
+  display: flex;
+  flex-wrap: wrap;
+  text-wrap: wrap;
   background: #ffffff;
-
   width: 1014px;
-  height: 211px;
-
+  min-height: 150px; /* Use min-height to allow for text expansion */
+  max-height: 300px; /* Set a maximum height to enable scrolling when needed */
   border-radius: 9px;
   border: 1px solid #cccccc;
   font-family: Roboto;
-  font-size: 30px;
+  font-size: 18px; /* Reduced font size for better text input experience */
   font-weight: 400;
-  line-height: 35px;
+  line-height: 1.5; /* Adjust line-height for better spacing */
   letter-spacing: 0.02em;
-  text-align: start;
+  text-align: left;
+  padding: 10px; /* Add padding for better visual appearance */
+  resize: vertical; /* Enable vertical resizing for text input */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds the max-height */
+  word-wrap: break-word; /* Automatically wrap long words to the next line */
+  overflow-wrap: break-word; /* Automatically wrap long words to the next line */
 }
+
 .send {
   position: absolute;
   width: 34.44px;
@@ -48,4 +66,55 @@
   cursor: pointer;
   border: none;
   background: url("send.png");
+}
+
+.notes-display {
+  max-height: 730px; /* Set a maximum height for the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.root-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #f7ecdc;
+  width: 75%;
+}
+.img-container {
+  margin-top: 15%;
+  background-image: url(back.png);
+  width: 626px;
+  height: 313px;
+  top: 237px;
+  left: 660px;
+}
+.txt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pn {
+  margin-left: 18%;
+  width: 310px;
+  height: 59px;
+  top: 562px;
+  left: 817px;
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 59px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.info-text {
+  width: 646px;
+  height: 64px;
+  top: 633px;
+  left: 649px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  text-align: left;
 }

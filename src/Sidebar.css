@@ -2,10 +2,10 @@
     display: flex;
     
   } */
-  .notes-list-container {
+  .sidebar-container {
    
     height: 56vw;
-    width: 25%;
+    width: 22%;
     margin-left: 5px;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,13 @@
     top: 117px;
     left: 44px;
     border-radius: 50px;
+    
     cursor: pointer;
     
+  }
+  .note-list-container{
+    margin-left: 36px;
+  
+   
   }
   

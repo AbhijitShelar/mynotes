@@ -4,6 +4,10 @@ import "./CreateNote.css";
 
 const CreateNote = () => {
   const [groupName, setGroupName] = useState("");
+  const [bgColor, setBgColor] = useState("");
+
+
+
   const [groupNamesParent, setGroupNamesParent] = useState(
     JSON.parse(localStorage.getItem("groupNames")) || []
   );
@@ -25,7 +29,7 @@ const CreateNote = () => {
     const hide = document.getElementById("root-container");
     hide.style.display = "none";
 
-    const newGroup = { name: groupName };
+    const newGroup = { name: groupName,color:bgColor };
     const updatedGroupNames = [...groupNamesParent, newGroup];
     setGroupNamesParent(updatedGroupNames);
 
@@ -33,22 +37,26 @@ const CreateNote = () => {
     localStorage.setItem("groupNames", JSON.stringify(updatedGroupNames));
 
     //to get titles when page refreshes
-    const newNoteTitles = groupName;
+    const newNoteTitles = {groupName,bgColor};
     const updatedNoteTitles = [...noteTitlesParent, newNoteTitles];
     setNoteTitlesParent(updatedNoteTitles);
     localStorage.setItem("noteTitles", JSON.stringify(updatedNoteTitles));
 
-    // Add the group name to the context (if needed)
-    addTitle(groupName);
-
+    // Add the group name to the context 
+    addTitle({groupName,bgColor});
     setGroupName(""); // Clear the input field
+  };
+
+  const handleColor = (e) => {
+    const div = e.target;
+    setBgColor(getComputedStyle(div).backgroundColor);
   };
 
   return (
     <div id="root-container">
-      <h1>Create New Notes group</h1>
+      <h3>Create New Notes group</h3>
       <div className="group-name">
-        <h2>Group name</h2>
+        <span >Group name</span>
         <input
           id="input-text"
           type="text"
@@ -58,8 +66,46 @@ const CreateNote = () => {
           placeholder="Enter Group Name...."
         ></input>
       </div>
-      <div className="color">
-        <h3>Choose Color</h3>
+      <div className="popup__color__input">
+        <span>Group Color</span>
+        <div className="popup__color__input__color">
+          <div
+            className={`popup__color__input__color__1 ${
+              bgColor === "rgb(179, 139, 250)" ? `highlight` : null
+            }`}
+            onClick={handleColor}
+          ></div>
+          <div
+            className={`popup__color__input__color__2 ${
+              bgColor === "rgb(255, 121, 242)" ? `highlight` : null
+            }`}
+            onClick={handleColor}
+          ></div>
+          <div
+            className={`popup__color__input__color__3 ${
+              bgColor === "rgb(67, 230, 252)" ? `highlight` : null
+            }`}
+            onClick={handleColor}
+          ></div>
+          <div
+            className={`popup__color__input__color__4 ${
+              bgColor === "rgb(241, 149, 118)" ? `highlight` : null
+            }`}
+            onClick={handleColor}
+          ></div>
+          <div
+            className={`popup__color__input__color__5 ${
+              bgColor === "rgb(0, 71, 255)" ? `highlight` : null
+            }`}
+            onClick={handleColor}
+          ></div>
+          <div
+            className={`popup__color__input__color__6 ${
+              bgColor === "rgb(102, 145, 255)" ? `highlight` : null
+            }`}
+            onClick={handleColor}
+          ></div>
+        </div>
       </div>
       <button id="create-btn" className="create-button" onClick={handleclick}>
         Create
