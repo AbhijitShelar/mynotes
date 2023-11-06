@@ -86,6 +86,10 @@ const Homepage = () => {
            
               Use Pocket Notes on up to 4 linked devices and 1 mobile phone
             </p>
+            <div className="footer-text">
+              <div className="lock-logo"></div>
+            <span className="endtext">end-to-end encrypted</span>
+            </div>
           </div>
         </div>
       )}

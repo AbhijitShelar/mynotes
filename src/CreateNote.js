@@ -5,6 +5,7 @@ import "./CreateNote.css";
 const CreateNote = () => {
   const [groupName, setGroupName] = useState("");
   const [bgColor, setBgColor] = useState("");
+  const[isColorSelected,setIsColorSelected]=useState(false);
 
 
 
@@ -23,6 +24,10 @@ const CreateNote = () => {
   const handleclick = () => {
     if (!groupName) {
       alert("Enter a Group name");
+      return;
+    }
+    if(!isColorSelected){
+      alert("Plz Select Note Color");
       return;
     }
 
@@ -48,6 +53,7 @@ const CreateNote = () => {
   };
 
   const handleColor = (e) => {
+    setIsColorSelected(!isColorSelected);
     const div = e.target;
     setBgColor(getComputedStyle(div).backgroundColor);
   };

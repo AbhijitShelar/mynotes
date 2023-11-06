@@ -1,4 +1,4 @@
-/* Note.css (or your desired CSS file) */
+
 .home-container {
   background: #f7ecdc;
   width: 78%;
@@ -6,7 +6,7 @@
 
 .header-note {
   align-items: center;
- padding: 10px;
+  padding: 10px;
   display: flex;
   height: 5vw;
   width: 77vw;
@@ -117,4 +117,17 @@
   line-height: 32px;
   letter-spacing: 0.02em;
   text-align: left;
+}
+.footer-text {
+
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+.lock-logo {
+  margin-right: 10px;
+  background-image: url(lock.png);
+  width: 17px;
+  height: 21px;
+  
 }
